@@ -1,0 +1,77 @@
+#!/bin/bash
+opcoes=("apk" "apk-install" "bundle" "apk-bundle" "gera-as-porra-toda" "build-runner" "build-runner-conflicts" "launcher-icon")
+
+# BUILD_APK="flutter clean && flutter build apk --debug && flutter build apk --profile && flutter build apk --release --target-platform=android-arm"
+BUILD_APK="flutter build apk --release --target-platform=android-arm"
+
+select opcao in ${opcoes[@]}
+do
+	case $opcao in 
+		apk)
+            echo "Executando $opcao..."
+			eval $BUILD_APK
+            nautilus build/app/outputs/apk/release/
+            break
+		;;
+        apk-install)
+            echo "Executando $opcao..."
+            eval $BUILD_APK
+            adb install build/app/outputs/apk/release/app-release.apk
+            break
+        ;;    
+		bundle)
+            echo "Executando $opcao..."
+			flutter build appbundle
+            nautilus build/app/outputs/bundle/release/
+            break
+		;;
+        apk-bundle)
+            echo "Executando $opcao..."
+            eval $BUILD_APK
+			flutter build appbundle
+            nautilus build/app/outputs/
+            break
+		;;
+        gera-as-porra-toda)
+            echo "Executando $opcao..."
+
+            rm -rf build-all
+            mkdir build-all
+
+            echo
+            echo "Digite a versão (sem o 'v'):"
+            read VERSAO
+
+            echo
+
+            # sed -i '/static bool flagDev =/c\  static bool flagDev = false;' lib/app/shared/utils/models/app_preferences.dart
+            
+            # sed -i '/static String backEndUrl =/c\static String backEndUrl = urlTeste;' lib/app/shared/utils/services/http.service.dart
+            eval $BUILD_APK
+            cp build/app/outputs/apk/release/app-release.apk "build-all/sme-prefeitura-sp-v$VERSAO.teste.apk"
+
+            # sed -i '/static String backEndUrl =/c\static String backEndUrl = urlProd;' lib/app/shared/utils/services/http.service.dart
+            eval $BUILD_APK
+            cp build/app/outputs/apk/release/app-release.apk "build-all/sme-prefeitura-sp-v$VERSAO.prod.apk"
+
+			# flutter build appbundle
+            # cp build/app/outputs/bundle/release/app-release.aab "build-all/sme-prefeitura-sp-v$VERSAO.bundle.aab"
+            
+            nautilus build-all/
+        ;;
+        build-runner)
+            echo "Executando $opcao..."
+            flutter pub run build_runner watch
+        ;;
+        build-runner-conflicts)
+            echo "Executando $opcao..."
+            flutter packages pub run build_runner build --delete-conflicting-outputs
+        ;;
+        launcher-icon)
+            echo "Executando $opcao..."
+            flutter pub run flutter_launcher_icons:main
+        ;;
+		*) echo "Opção Inválida"
+		;;
+	esac
+done
