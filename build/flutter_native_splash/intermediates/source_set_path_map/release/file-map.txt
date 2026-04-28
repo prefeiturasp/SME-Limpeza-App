@@ -1,0 +1,12 @@
+net.jonhanson.flutter_native_splash-core-1.6.0-0 C:\Users\thiago.procorio\.gradle\caches\transforms-3\629174ec04c984656c1a7192a76f32f9\transformed\core-1.6.0\res
+net.jonhanson.flutter_native_splash-jetified-annotation-experimental-1.1.0-1 C:\Users\thiago.procorio\.gradle\caches\transforms-3\63d421051a5924070b44e5d32cd9e635\transformed\jetified-annotation-experimental-1.1.0\res
+net.jonhanson.flutter_native_splash-jetified-window-java-1.0.0-beta04-2 C:\Users\thiago.procorio\.gradle\caches\transforms-3\6967a78cb7ff54396708395654b25ebb\transformed\jetified-window-java-1.0.0-beta04\res
+net.jonhanson.flutter_native_splash-jetified-window-1.0.0-beta04-3 C:\Users\thiago.procorio\.gradle\caches\transforms-3\b9cad7c703ec095051ae4b8132775804\transformed\jetified-window-1.0.0-beta04\res
+net.jonhanson.flutter_native_splash-pngs-4 C:\Users\thiago.procorio\sme\SME-Limpeza-App\build\flutter_native_splash\generated\res\pngs\release
+net.jonhanson.flutter_native_splash-resValues-5 C:\Users\thiago.procorio\sme\SME-Limpeza-App\build\flutter_native_splash\generated\res\resValues\release
+net.jonhanson.flutter_native_splash-rs-6 C:\Users\thiago.procorio\sme\SME-Limpeza-App\build\flutter_native_splash\generated\res\rs\release
+net.jonhanson.flutter_native_splash-mergeReleaseResources-7 C:\Users\thiago.procorio\sme\SME-Limpeza-App\build\flutter_native_splash\intermediates\incremental\release\mergeReleaseResources\merged.dir
+net.jonhanson.flutter_native_splash-mergeReleaseResources-8 C:\Users\thiago.procorio\sme\SME-Limpeza-App\build\flutter_native_splash\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+net.jonhanson.flutter_native_splash-merged_res-9 C:\Users\thiago.procorio\sme\SME-Limpeza-App\build\flutter_native_splash\intermediates\merged_res\release
+net.jonhanson.flutter_native_splash-main-10 C:\tools\flutter\flutter\.pub-cache\hosted\pub.dartlang.org\flutter_native_splash-2.1.6\android\src\main\res
+net.jonhanson.flutter_native_splash-release-11 C:\tools\flutter\flutter\.pub-cache\hosted\pub.dartlang.org\flutter_native_splash-2.1.6\android\src\release\res

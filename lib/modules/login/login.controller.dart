@@ -37,7 +37,7 @@ class LoginController extends GetxController {
         Get.offAllNamed(Routes.HOME);
       }
     } catch (e) {
-      print(e);
+      print("Erro ao realizar login: $e");
     }
 
     carregando.value = false;

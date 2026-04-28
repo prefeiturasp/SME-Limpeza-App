@@ -23,7 +23,7 @@ class MyDropdownFieldWidget extends StatelessWidget {
       modalFilterAuto: true,
       choiceItems: list.map((e) => toChoice(e)).toList(),
       onChange: (item) => onTap(item.value),
-      value: getSelectedItem(),
+      //value: getSelectedItem(),
       title: "${config.label}${config.isObrigatorio() ? ' *' : ''}",
       tileBuilder: (context, S2SingleState<DropdownItem> state) => getFieldWidget(state, getSelectedItem()),
     );  

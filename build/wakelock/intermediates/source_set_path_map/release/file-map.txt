@@ -1,0 +1,12 @@
+creativemaybeno.wakelock-core-1.6.0-0 C:\Users\thiago.procorio\.gradle\caches\transforms-3\629174ec04c984656c1a7192a76f32f9\transformed\core-1.6.0\res
+creativemaybeno.wakelock-jetified-annotation-experimental-1.1.0-1 C:\Users\thiago.procorio\.gradle\caches\transforms-3\63d421051a5924070b44e5d32cd9e635\transformed\jetified-annotation-experimental-1.1.0\res
+creativemaybeno.wakelock-jetified-window-java-1.0.0-beta04-2 C:\Users\thiago.procorio\.gradle\caches\transforms-3\6967a78cb7ff54396708395654b25ebb\transformed\jetified-window-java-1.0.0-beta04\res
+creativemaybeno.wakelock-jetified-window-1.0.0-beta04-3 C:\Users\thiago.procorio\.gradle\caches\transforms-3\b9cad7c703ec095051ae4b8132775804\transformed\jetified-window-1.0.0-beta04\res
+creativemaybeno.wakelock-pngs-4 C:\Users\thiago.procorio\sme\SME-Limpeza-App\build\wakelock\generated\res\pngs\release
+creativemaybeno.wakelock-resValues-5 C:\Users\thiago.procorio\sme\SME-Limpeza-App\build\wakelock\generated\res\resValues\release
+creativemaybeno.wakelock-rs-6 C:\Users\thiago.procorio\sme\SME-Limpeza-App\build\wakelock\generated\res\rs\release
+creativemaybeno.wakelock-mergeReleaseResources-7 C:\Users\thiago.procorio\sme\SME-Limpeza-App\build\wakelock\intermediates\incremental\release\mergeReleaseResources\merged.dir
+creativemaybeno.wakelock-mergeReleaseResources-8 C:\Users\thiago.procorio\sme\SME-Limpeza-App\build\wakelock\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+creativemaybeno.wakelock-merged_res-9 C:\Users\thiago.procorio\sme\SME-Limpeza-App\build\wakelock\intermediates\merged_res\release
+creativemaybeno.wakelock-main-10 C:\tools\flutter\flutter\.pub-cache\hosted\pub.dartlang.org\wakelock-0.6.2\android\src\main\res
+creativemaybeno.wakelock-release-11 C:\tools\flutter\flutter\.pub-cache\hosted\pub.dartlang.org\wakelock-0.6.2\android\src\release\res

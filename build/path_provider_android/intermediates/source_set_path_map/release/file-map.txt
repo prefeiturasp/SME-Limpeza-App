@@ -1,0 +1,12 @@
+io.flutter.plugins.pathprovider.path_provider_android-core-1.6.0-0 C:\Users\thiago.procorio\.gradle\caches\transforms-3\629174ec04c984656c1a7192a76f32f9\transformed\core-1.6.0\res
+io.flutter.plugins.pathprovider.path_provider_android-jetified-annotation-experimental-1.1.0-1 C:\Users\thiago.procorio\.gradle\caches\transforms-3\63d421051a5924070b44e5d32cd9e635\transformed\jetified-annotation-experimental-1.1.0\res
+io.flutter.plugins.pathprovider.path_provider_android-jetified-window-java-1.0.0-beta04-2 C:\Users\thiago.procorio\.gradle\caches\transforms-3\6967a78cb7ff54396708395654b25ebb\transformed\jetified-window-java-1.0.0-beta04\res
+io.flutter.plugins.pathprovider.path_provider_android-jetified-window-1.0.0-beta04-3 C:\Users\thiago.procorio\.gradle\caches\transforms-3\b9cad7c703ec095051ae4b8132775804\transformed\jetified-window-1.0.0-beta04\res
+io.flutter.plugins.pathprovider.path_provider_android-pngs-4 C:\Users\thiago.procorio\sme\SME-Limpeza-App\build\path_provider_android\generated\res\pngs\release
+io.flutter.plugins.pathprovider.path_provider_android-resValues-5 C:\Users\thiago.procorio\sme\SME-Limpeza-App\build\path_provider_android\generated\res\resValues\release
+io.flutter.plugins.pathprovider.path_provider_android-rs-6 C:\Users\thiago.procorio\sme\SME-Limpeza-App\build\path_provider_android\generated\res\rs\release
+io.flutter.plugins.pathprovider.path_provider_android-mergeReleaseResources-7 C:\Users\thiago.procorio\sme\SME-Limpeza-App\build\path_provider_android\intermediates\incremental\release\mergeReleaseResources\merged.dir
+io.flutter.plugins.pathprovider.path_provider_android-mergeReleaseResources-8 C:\Users\thiago.procorio\sme\SME-Limpeza-App\build\path_provider_android\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+io.flutter.plugins.pathprovider.path_provider_android-merged_res-9 C:\Users\thiago.procorio\sme\SME-Limpeza-App\build\path_provider_android\intermediates\merged_res\release
+io.flutter.plugins.pathprovider.path_provider_android-main-10 C:\tools\flutter\flutter\.pub-cache\hosted\pub.dartlang.org\path_provider_android-2.0.22\android\src\main\res
+io.flutter.plugins.pathprovider.path_provider_android-release-11 C:\tools\flutter\flutter\.pub-cache\hosted\pub.dartlang.org\path_provider_android-2.0.22\android\src\release\res

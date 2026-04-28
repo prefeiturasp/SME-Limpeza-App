@@ -9,12 +9,13 @@ class Routes {
     }
   }
 
-  static const String LOGIN = "LOGIN";
-  static const String HOME = "HOME";
-  static const String UNIDADE_ESCOLAR = "UNIDADE_ESCOLAR";
-  static const String TURNO = "TURNO";
-  static const String AMBIENTE = "AMBIENTE";
-  static const String MONITORAMENTO = "MONITORAMENTO";
-  static const String PLANO_TRABALHO = "PLANO_TRABALHO";
+
+static const String LOGIN = "/login";
+static const String HOME = "/home";
+static const String UNIDADE_ESCOLAR = "/unidade_escolar";
+static const String TURNO = "/turno";
+static const String AMBIENTE = "/ambiente";
+static const String MONITORAMENTO = "/monitoramento";
+static const String PLANO_TRABALHO = "/plano_trabalho";
 
 }

@@ -12,7 +12,7 @@ class ApiBackProvider {
     static String urlLocal = "http://192.168.1.110:3001/api/app";
     static String urlDev = "https://dev-limpeza.sme.prefeitura.sp.gov.br/api/app";
     static String urlProd = "https://limpeza.sme.prefeitura.sp.gov.br/api/app";
-    static String backEndUrl = urlLocal;
+    static String backEndUrl = urlProd;
 
     static doGet(url, {timeout = timeoutDefault}) async {
       return _getDio().get(_getUrl(url)).catchError(onError);
@@ -30,27 +30,40 @@ class ApiBackProvider {
       return _getDio().delete(_getUrl(url)).catchError(onError);
     }   
 
-    static onError([err, trace]) {
-      try {
-        if (err.response.statusCode == 401) {
-          LoginService.logout();
-        }
-      } catch (e) {
-        if (err.response == null || err.response.statusCode == null) {
-          LoadingUtils.hide();
-          
-          MessageUtils.showError();
-          throw e;
-        }
+  static onError([err, trace]) {
+    try {
+      if (err.response.statusCode == 401) {
+        LoginService.logout();
+        return;
       }
 
-      return checkResult(err.response);
+      if (err.response != null) {
+        LoadingUtils.hide();
+
+        Map<String, dynamic> body = err.response.data;
+        var msg = MessageUtils.translate('MG002');
+        try {
+          msg = Utils.coalesce(body['msg'], Utils.coalesce(body['data'], msg));
+        } catch (e) {}
+        MessageUtils.showError(msg);
+        throw msg;
+      }
+    } catch (e) {
+      if (err.response == null || err.response.statusCode == null) {
+        LoadingUtils.hide();
+        MessageUtils.showError();
+        throw e;
+      }
+      throw e;
     }
+
+    return checkResult(err.response);
+  }
 
     static checkResult(response) {
       Map<String, dynamic> body = response.data;
       if (response.statusCode == 401) {
-        LoginService.logout();       
+        LoginService.logout();
       }
 
       if (body['status'] == false || response.statusCode != 200) {
@@ -58,13 +71,13 @@ class ApiBackProvider {
 
         var msg = MessageUtils.translate('MG002');
         try {
-          msg = Utils.coalesce(body['data'], msg);
+          msg = Utils.coalesce(body['msg'], Utils.coalesce(body['data'], msg));
         } catch (e) {}
         MessageUtils.showError(msg);
         throw msg;
       }
       return body['data'];
-    }     
+    } 
 
     static _getUrl(url) {
       url = backEndUrl + url;
@@ -73,22 +86,23 @@ class ApiBackProvider {
     }
 
     static Dio _getDio() {
-      Dio dio = Dio();
-      dio.options.connectTimeout = 20000;
+      Dio dio = Dio(BaseOptions(
+        receiveDataWhenStatusError: true,
+        connectTimeout: 20000,
+      ));
       dio.interceptors.add(_getInterceptor());
-
       return dio;
     }
 
-    static  _getInterceptor() {
-      return InterceptorsWrapper(
-          onRequest:(RequestOptions options, handler) => _onRequestInterceptor(options, handler),
-          onError: (DioError e, _) async {
-            print(e);
-            return  e;//continue
+
+      static _getInterceptor() {
+        return InterceptorsWrapper(
+          onRequest: (RequestOptions options, handler) => _onRequestInterceptor(options, handler),
+          onError: (DioError e, ErrorInterceptorHandler handler) async {
+            handler.next(e); 
           }
-      );
-    }
+        );
+      }
 
     static _onRequestInterceptor(RequestOptions options, handler) async {
       options.headers.addAll({"Content-type": "application/json"});

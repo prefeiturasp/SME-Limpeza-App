@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "creativemaybeno.wakelock-merged_res-8:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\thiago.procorio\\.gradle\\caches\\transforms-3\\629174ec04c984656c1a7192a76f32f9\\transformed\\core-1.6.0\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "creativemaybeno.wakelock-mergeReleaseResources-6:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\thiago.procorio\\.gradle\\caches\\transforms-3\\629174ec04c984656c1a7192a76f32f9\\transformed\\core-1.6.0\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}
